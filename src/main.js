@@ -19,9 +19,8 @@ searchForm.addEventListener('submit', onSearchBtnSubmit);
 function onSearchBtnSubmit(event) {
   event.preventDefault();
   const valueToSearch = event.target.elements.searchField.value.trim();
-
+  gallery.innerHTML = '';
   if (valueToSearch === '') {
-    gallery.innerHTML = '';
     displayMessage('You forgot enter data for search', '#ffa000');
     return;
   }
